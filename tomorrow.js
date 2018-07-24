@@ -6,7 +6,7 @@ const google = require("googleapis");
 const youtube = google.youtube("v3");
 
 const bot = new Discord.Client();
-const prefix = "t!";
+const prefix = "=";
 const botChannelName = "🏦comandos";
 var botChannel;
 var fortunes = ["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely of it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Reply hazy try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Dont count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"];
@@ -577,8 +577,7 @@ var checkForCommand = function(message){
 			try{
 				commands[command].process(message, args);
 			} catch(e){
-				botChannel.send("Desculpe, isso não é um comando válido. :sob:", {reply: message});
-				botChannel.send(`You can type \`${prefix}help\` to see a list of my commands`);
+				botChannel.send("Desculpe, isso não é um comando válido.:sob:", {reply: message});
 			}
 		} else{
 			message.channel.send(`Please create a \`${botChannelName}\` channel`);
