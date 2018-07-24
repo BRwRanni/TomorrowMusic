@@ -577,7 +577,7 @@ var checkForCommand = function(message){
 			try{
 				commands[command].process(message, args);
 			} catch(e){
-				botChannel.send("Sorry, that isn't a command yet :sob:", {reply: message});
+				botChannel.send("Desculpe, isso não é um comando válido. :sob:", {reply: message});
 				botChannel.send(`You can type \`${prefix}help\` to see a list of my commands`);
 			}
 		} else{
